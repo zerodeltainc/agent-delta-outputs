@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Agent Delta Outputs</title>
+    <style>
+      body { font-family: monospace; max-width: 800px; margin: 40px auto; padding: 0 20px; background: #0d1117; color: #c9d1d9; }
+      h1 { color: #58a6ff; }
+      .folder { margin: 16px 0; }
+      .folder-name { font-weight: bold; color: #79c0ff; font-size: 1.1em; cursor: pointer; user-select: none; }
+      .folder-name::before { content: "▶ "; }
+      .folder-name.open::before { content: "▼ "; }
+      .files { display: none; margin: 6px 0 0 20px; }
+      .files.open { display: block; }
+      a { color: #58a6ff; text-decoration: none; display: block; padding: 3px 0; }
+      a:hover { text-decoration: underline; }
+      .failed { color: #f85149; }
+      .loading { color: #8b949e; }
+    </style>
+  </head>
+  <body>
+    <h1>Agent Delta Outputs</h1>
+    <div id="root" class="loading">Loading...</div>
+
+    <script>
+      const REPO = "zerodeltainc/agent-delta-outputs";
+      const BASE_URL = `https://zerodeltainc.github.io/agent-delta-outputs`;
+      const API = `https://api.github.com/repos/${REPO}/contents/data`;
+
+      async function fetchJSON(url) {
+        const r = await fetch(url);
+        return r.json();
+      }
+
+      function toggle(el) {
+        el.classList.toggle("open");
+        el.nextElementSibling.classList.toggle("open");
+      }
+
+      async function render() {
+        const root = document.getElementById("root");
+        try {
+          const folders = await fetchJSON(API);
+          if (!Array.isArray(folders) || folders.length === 0) {
+            root.textContent = "No output folders yet.";
+            return;
+          }
+          // Sort newest first
+          folders.sort((a, b) => b.name.localeCompare(a.name));
+          root.innerHTML = "";
+
+          for (const folder of folders) {
+            if (folder.type !== "dir") continue;
+            const div = document.createElement("div");
+            div.className = "folder";
+
+            const label = document.createElement("div");
+            label.className = "folder-name";
+            label.textContent = folder.name;
+            label.onclick = async () => {
+              label.classList.toggle("open");
+              const fileList = label.nextElementSibling;
+              fileList.classList.toggle("open");
+              if (fileList.childElementCount === 0) {
+                const files = await fetchJSON(folder.url);
+                files.sort((a, b) => b.name.localeCompare(a.name));
+                for (const f of files) {
+                  if (!f.name.endsWith(".html")) continue;
+                  const a = document.createElement("a");
+                  a.href = `${BASE_URL}/data/${folder.name}/${f.name}`;
+                  a.target = "_blank";
+                  a.textContent = f.name;
+                  if (f.name.includes("FAILED")) a.className = "failed";
+                  fileList.appendChild(a);
+                }
+              }
+            };
+
+            const fileList = document.createElement("div");
+            fileList.className = "files";
+
+            div.appendChild(label);
+            div.appendChild(fileList);
+            root.appendChild(div);
+          }
+        } catch (e) {
+          root.textContent = "Error loading data: " + e.message;
+        }
+      }
+
+      render();
+    </script>
+  </body>
+  </html>
