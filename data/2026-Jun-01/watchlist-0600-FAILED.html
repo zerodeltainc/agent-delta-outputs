@@ -1,0 +1,135 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title></title>
+<style type="text/css">
+.ansi2html-content { display: inline; white-space: pre-wrap; word-wrap: break-word; }
+.body_foreground { color: #AAAAAA; }
+.body_background { background-color: #000000; }
+.inv_foreground { color: #000000; }
+.inv_background { background-color: #AAAAAA; }
+.ansi1 { font-weight: bold; }
+.ansi91 { color: #ff0000; }
+.ansi92 { color: #00ff00; }
+</style>
+</head>
+<body class="body_foreground body_background" style="font-size: normal;" >
+<pre class="ansi2html-content">
+
+<span class="ansi1">Market Context</span>
+────────────────────────────────────────────────────────────
+  Index     Price     1-Day     5-Day
+  --------------------------------------
+  <a href="https://www.perplexity.ai/finance/SPY">SPY   </a> $ 758.17  <span class="ansi92">+  0.22%</span>  <span class="ansi92">+  1.01%</span>
+  <a href="https://www.perplexity.ai/finance/QQQ">QQQ   </a> $ 742.44  <span class="ansi92">+  0.56%</span>  <span class="ansi92">+  1.67%</span>
+  <a href="https://www.perplexity.ai/finance/DIA">DIA   </a> $ 511.46  <span class="ansi92">+  0.13%</span>  <span class="ansi92">+  1.23%</span>
+  <a href="https://www.perplexity.ai/finance/IWM">IWM   </a> $ 289.02  <span class="ansi91"> -0.49%</span>  <span class="ansi91"> -0.51%</span>
+
+<span class="ansi1">Sector Strength (5-day %)</span>
+────────────────────────────────────────────────────────────────────────
+                                          1-Day    5-Day  Chart
+  ------------------------------------------------------------------
+   1. <a href="https://www.perplexity.ai/finance/XLK">XLK  </a> Technology                 <span class="ansi92">+ 2.42%</span>  <span class="ansi92">+ 5.67%</span>  <span class="ansi92">███████████</span>
+   2. <a href="https://www.perplexity.ai/finance/SMH">SMH  </a> Semiconductors             <span class="ansi92">+ 1.40%</span>  <span class="ansi92">+ 0.86%</span>  <span class="ansi92">█</span>
+   3. <a href="https://www.perplexity.ai/finance/XLC">XLC  </a> Communication Services     <span class="ansi91">-0.01%</span>  <span class="ansi92">+ 0.11%</span>  <span class="ansi92"></span>
+   4. <a href="https://www.perplexity.ai/finance/IBB">IBB  </a> Biotech                    <span class="ansi91">-1.67%</span>  <span class="ansi91">-0.06%</span>  <span class="ansi91"></span>
+   5. <a href="https://www.perplexity.ai/finance/XLB">XLB  </a> Materials                  <span class="ansi91">-0.50%</span>  <span class="ansi91">-0.19%</span>  <span class="ansi91"></span>
+   6. <a href="https://www.perplexity.ai/finance/XLV">XLV  </a> Healthcare                 <span class="ansi91">-1.25%</span>  <span class="ansi91">-0.61%</span>  <span class="ansi91">█</span>
+   7. <a href="https://www.perplexity.ai/finance/XLF">XLF  </a> Financials                 <span class="ansi91">-0.28%</span>  <span class="ansi91">-0.80%</span>  <span class="ansi91">█</span>
+   8. <a href="https://www.perplexity.ai/finance/XLY">XLY  </a> Consumer Cyclical          <span class="ansi91">-2.16%</span>  <span class="ansi91">-1.00%</span>  <span class="ansi91">██</span>
+   9. <a href="https://www.perplexity.ai/finance/XLI">XLI  </a> Industrials                <span class="ansi91">-0.43%</span>  <span class="ansi91">-1.10%</span>  <span class="ansi91">██</span>
+  10. <a href="https://www.perplexity.ai/finance/XLE">XLE  </a> Energy                     <span class="ansi92">+ 1.64%</span>  <span class="ansi91">-1.10%</span>  <span class="ansi91">██</span>
+  11. <a href="https://www.perplexity.ai/finance/XLP">XLP  </a> Consumer Defensive         <span class="ansi91">-1.12%</span>  <span class="ansi91">-1.97%</span>  <span class="ansi91">███</span>
+  12. <a href="https://www.perplexity.ai/finance/XLRE">XLRE </a> Real Estate                <span class="ansi91">-1.49%</span>  <span class="ansi91">-3.08%</span>  <span class="ansi91">██████</span>
+  13. <a href="https://www.perplexity.ai/finance/XLU">XLU  </a> Utilities                  <span class="ansi91">-2.97%</span>  <span class="ansi91">-4.92%</span>  <span class="ansi91">█████████</span>
+
+Traceback (most recent call last):
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/urllib3/response.py", line 903, in _error_catcher
+    yield
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/urllib3/response.py", line 1418, in read_chunked
+    self._update_chunk_length()
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/urllib3/response.py", line 1333, in _update_chunk_length
+    line = self._fp.fp.readline()  # type: ignore[union-attr]
+           ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/socket.py", line 718, in readinto
+    return self._sock.recv_into(b)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/ssl.py", line 1326, in recv_into
+    return self.read(nbytes, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/ssl.py", line 1178, in read
+    return self._sslobj.read(len, buffer)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: The read operation timed out
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/requests/models.py", line 822, in generate
+    yield from self.raw.stream(chunk_size, decode_content=True)
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/urllib3/response.py", line 1250, in stream
+    yield from self.read_chunked(amt, decode_content=decode_content)
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/urllib3/response.py", line 1397, in read_chunked
+    with self._error_catcher():
+  File "/home/runner/.local/share/uv/python/cpython-3.11.15-linux-x86_64-gnu/lib/python3.11/contextlib.py", line 158, in __exit__
+    self.gen.throw(typ, value, traceback)
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/urllib3/response.py", line 908, in _error_catcher
+    raise ReadTimeoutError(self._pool, None, "Read timed out.") from e  # type: ignore[arg-type]
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+urllib3.exceptions.ReadTimeoutError: HTTPSConnectionPool(host='finviz.com', port=443): Read timed out.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/runner/work/agent-delta/agent-delta/.venv/bin/watchlist", line 10, in &lt;module&gt;
+    sys.exit(main())
+             ^^^^^^
+  File "/home/runner/work/agent-delta/agent-delta/src/agent_delta/scanners/watchlist.py", line 594, in main
+    symbols, fundamentals = load_data(args.index, args.refresh)
+                            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/agent-delta/agent-delta/src/agent_delta/scanners/watchlist.py", line 123, in load_data
+    fundamentals = get_fundamentals(auto_refresh=force_refresh or True, index=index)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/agent-delta/agent-delta/src/agent_delta/data/finviz_cache.py", line 226, in get_fundamentals
+    refresh(index=index)
+  File "/home/runner/work/agent-delta/agent-delta/src/agent_delta/data/finviz_cache.py", line 209, in refresh
+    records = _fetch_from_finviz(index)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/agent-delta/agent-delta/src/agent_delta/data/finviz_cache.py", line 108, in _fetch_from_finviz
+    df_ov = ov.screener_view(verbose=0)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/finvizfinance/screener/base.py", line 196, in screener_view
+    soup = web_scrap(self.url, self.request_params)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/finvizfinance/util.py", line 44, in web_scrap
+    website = session.get(
+              ^^^^^^^^^^^^
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/requests/sessions.py", line 605, in get
+    return self.request("GET", url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/requests/sessions.py", line 592, in request
+    resp = self.send(prep, **send_kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/requests/sessions.py", line 727, in send
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/requests/sessions.py", line 727, in &lt;listcomp&gt;
+    history = [resp for resp in gen]
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/requests/sessions.py", line 266, in resolve_redirects
+    resp = self.send(
+           ^^^^^^^^^^
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/requests/sessions.py", line 749, in send
+    r.content
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/requests/models.py", line 904, in content
+    self._content = b"".join(self.iter_content(CONTENT_CHUNK_SIZE)) or b""
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/runner/work/agent-delta/agent-delta/.venv/lib/python3.11/site-packages/requests/models.py", line 828, in generate
+    raise ConnectionError(e)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='finviz.com', port=443): Read timed out.
+
+</pre>
+</body>
+
+</html>
